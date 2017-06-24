@@ -28,7 +28,6 @@ module.exports = {
     module: {
         loaders: [
             { test : /\.jsx?/, include : __dirname + '/src/app', loader : 'babel-loader' },
-            { test: /\.(pug|jade)$/, loaders: [ 'raw-loader','pug-html-loader']},
             { test: /\.(js)$/, loader: 'babel-loader', exclude: /node_modules/ },
             { test: /\.html$/, loader: 'raw-loader' },
             { test: /\.json$/, loader: 'json-loader' },
