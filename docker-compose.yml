@@ -5,7 +5,7 @@ services:
             context: .
             dockerfile: ./docker/web/Dockerfile
         ports:
-            - 80:80
+            - 8000:80
             - 443:443
         environment:
             - PROJECT_DOMAIN=domain.local
@@ -18,14 +18,14 @@ services:
             - project
         depends_on:
             - project
-            
+
     project:
         build:
             context: .
             dockerfile: ./docker/project/Dockerfile
         volumes:
             - ./:/home/docker
-            
+
     elk:
         image: willdurand/elk:latest
         tty: true
@@ -36,17 +36,17 @@ services:
         volumes_from:
             - elk-data
             - web
-        depends_on: 
+        depends_on:
             - web
             - elk-data
-    
+
     elk-data:
         image: busybox:latest
         tty: true
         volumes:
             - data:/data
-        
+
 volumes:
     logs: {}
     data: {}
-    
+
