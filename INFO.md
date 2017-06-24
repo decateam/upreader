@@ -5,7 +5,8 @@
 
 # Synthèse vocale
 
- - [MeSpeak](http://www.masswerk.at/mespeak/)
+ - [MeSpeak](http://www.masswerk.at/mespeak/) => Webkit uniquement
+ - [HTML TTS API](https://codepen.io/SteveJRobertson/pen/emGWaR) => Utilise la voix de l'OS, par contre ne peut pas utiliser une langue non installée
  - Gérer des profils avec vitesse de lecture
 
 # Gestion manette
